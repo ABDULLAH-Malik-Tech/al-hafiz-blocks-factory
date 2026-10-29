@@ -1,1447 +1,1693 @@
+
 <!DOCTYPE html>
 <html lang="en-PK">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101c2b">
-
-<meta name="description" content="Al Hafiz Blocks Factory, established in 2018 in Talagang, Punjab, Pakistan. Concrete blocks measuring 6 × 8 × 12 inches. Contact us for prices and bulk orders.">
-
-<meta property="og:title" content="Al Hafiz Blocks Factory | Talagang">
-<meta property="og:description" content="Concrete block manufacturing in Talagang, Punjab, Pakistan. Contact us for block prices and bulk order enquiries.">
-
-<title>Al Hafiz Blocks Factory | EST. 2018</title>
-<link rel="icon" type="image/jpeg" href="./al%20hafiz%20blocks%20logo.jpg">
-
-<style>
-:root {
-  --navy: #101c2b;
-  --navy2: #192b3e;
-  --gold: #e7ad43;
-  --cream: #f6f4ef;
-  --white: #fff;
-  --muted: #687483;
-  --border: #e5e4df;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 85px;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--navy);
-  background: var(--white);
-  line-height: 1.7;
-}
-
-a {
-  color: inherit;
-}
-
-.container {
-  width: min(1120px, 90%);
-  margin: auto;
-}
-
-.topbar {
-  background: var(--navy);
-  color: #d9e0e8;
-  padding: 8px 0;
-  font-size: 12px;
-  text-align: center;
-  letter-spacing: 1px;
-}
-
-header {
-  background: white;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  border-bottom: 1px solid var(--border);
-}
-
-.nav {
-  min-height: 78px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 22px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-
-.logo {
-  width: 47px;
-  height: 47px;
-  background: var(--navy);
-  color: var(--gold);
-  display: grid;
-  place-items: center;
-  font-weight: 900;
-  font-size: 19px;
-  border-radius: 5px;
-  flex: 0 0 47px;
-}
-
-.brand img.logo {
-  display: block;
-  padding: 3px;
-  object-fit: contain;
-  background: white;
-}
-
-.brand strong {
-  display: block;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-.brand small {
-  color: var(--muted);
-  font-size: 10px;
-  letter-spacing: 2px;
-}
-
-.navlinks {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-}
-
-.navlinks a {
-  font-size: 13px;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.navlinks a:hover {
-  color: #a76b0a;
-}
-
-.btn {
-  display: inline-block;
-  background: var(--gold);
-  color: var(--navy);
-  padding: 13px 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 800;
-  font-size: 13px;
-  border: 1px solid var(--gold);
-  transition: .2s;
-  text-align: center;
-}
-
-.btn:hover {
-  background: #f3c46e;
-}
-
-.btn-outline {
-  background: transparent;
-  color: white;
-  border-color: #687483;
-}
-
-.btn-outline:hover {
-  background: white;
-  color: var(--navy);
-}
-
-.hero {
-  background:
-    radial-gradient(ellipse at 80% 40%, #34485a 0%, transparent 38%),
-    linear-gradient(120deg, #101c2b, #192b3e 72%, #263b4d);
-  color: white;
-  overflow: hidden;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.15fr .85fr;
-  align-items: center;
-  gap: 45px;
-  padding-top: 90px;
-  padding-bottom: 90px;
-}
-
-.eyebrow {
-  color: var(--gold);
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 3px;
-}
-
-h1 {
-  font-size: clamp(39px, 5.5vw, 66px);
-  line-height: 1.08;
-  letter-spacing: -2px;
-  margin: 20px 0;
-}
-
-h1 span {
-  color: var(--gold);
-}
-
-.hero p {
-  color: #d4dce5;
-  max-width: 530px;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 27px;
-}
-
-.hero-note {
-  margin-top: 30px;
-  font-size: 12px;
-  color: #b8c4d0;
-}
-
-.block-art {
-  position: relative;
-  min-height: 320px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.block-stack {
-  transform: rotate(-7deg);
-}
-
-.concrete-block {
-  width: 230px;
-  height: 95px;
-  background: linear-gradient(145deg, #d5d5d0, #898e90);
-  border: 1px solid #777e82;
-  box-shadow: 0 17px 24px #08121c66;
-  margin-bottom: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  border-radius: 3px;
-}
-
-.hole {
-  width: 55px;
-  height: 39px;
-  background: #424b53;
-  border: 5px solid #b4b8b8;
-  box-shadow: inset 0 5px 8px #111923;
-  border-radius: 2px;
-}
-
-.art-label {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 15px 19px;
-  background: var(--gold);
-  color: var(--navy);
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 1px;
-}
-
-.stats {
-  background: var(--gold);
-  color: var(--navy);
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 23px 0;
-  text-align: center;
-}
-
-.stat {
-  padding: 5px 14px;
-  border-right: 1px solid #b9852b;
-}
-
-.stat:last-child {
-  border: 0;
-}
-
-.stat strong {
-  display: block;
-  font-size: 16px;
-}
-
-.stat span {
-  font-size: 11px;
-}
-
-section.content-section {
-  padding: 85px 0;
-}
-
-.section-head {
-  max-width: 660px;
-  margin-bottom: 36px;
-}
-
-.section-head h2,
-.about-copy h2 {
-  font-size: clamp(29px, 4vw, 42px);
-  line-height: 1.2;
-  letter-spacing: -1px;
-  margin: 10px 0 16px;
-}
-
-.section-head p,
-.about-copy p {
-  color: var(--muted);
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.card {
-  border: 1px solid var(--border);
-  padding: 27px;
-  border-radius: 6px;
-  background: white;
-  transition: transform .2s, box-shadow .2s;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px #101c2b12;
-}
-
-.card-number {
-  color: #b17a1d;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
-
-.card h3 {
-  font-size: 19px;
-  margin: 14px 0 8px;
-}
-
-.card p {
-  color: var(--muted);
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.about {
-  background: var(--cream);
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: .8fr 1.2fr;
-  gap: 65px;
-  align-items: center;
-}
-
-.about-visual {
-  background: var(--navy);
-  color: white;
-  min-height: 290px;
-  padding: 35px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-}
-
-.about-visual:before,
-.about-visual:after {
-  content: "";
-  position: absolute;
-  border: 1px solid #e7ad4344;
-  width: 220px;
-  height: 220px;
-  transform: rotate(35deg);
-}
-
-.about-visual:before {
-  right: -70px;
-  top: -60px;
-}
-
-.about-visual:after {
-  right: -15px;
-  top: -100px;
-}
-
-.about-visual strong {
-  font-size: 39px;
-  color: var(--gold);
-  z-index: 1;
-}
-
-.about-visual span {
-  z-index: 1;
-  color: #d6dce3;
-}
-
-.check-list {
-  padding: 0;
-  list-style: none;
-}
-
-.check-list li {
-  margin: 13px 0;
-}
-
-.check-list li:before {
-  content: "✓";
-  color: #a76b0a;
-  font-weight: 900;
-  margin-right: 12px;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.gallery-grid img {
-  display: block;
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.gallery-grid img:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px #101c2b18;
-}
-
-.cta {
-  background: var(--navy);
-  color: white;
-  padding: 58px 0;
-}
-
-.cta-grid {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.cta h2 {
-  font-size: clamp(26px, 4vw, 38px);
-  line-height: 1.2;
-  margin: 10px 0;
-}
-
-.cta p {
-  color: #c5cfda;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-
-.contact-item {
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  padding: 24px;
-  margin-bottom: 15px;
-}
-
-.contact-item h3 {
-  margin: 0 0 5px;
-  font-size: 16px;
-}
-
-.contact-item p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-footer {
-  background: #0a1420;
-  color: white;
-  padding: 35px 0;
-}
-
-.footer-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-
-footer p {
-  color: #b8c4d0;
-  font-size: 12px;
-  margin: 5px 0;
-}
-
-footer a {
-  color: var(--gold);
-  text-decoration: none;
-  font-size: 13px;
-}
-
-.wa {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 20;
-  background: #168b58;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  padding: 12px 17px;
-  font-weight: 800;
-  font-size: 13px;
-  box-shadow: 0 5px 20px #0003;
-}
-
-@media (max-width: 900px) {
-  .navlinks {
-    gap: 14px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101c2b">
+
+  <title>Al Hafiz Blocks Factory | Concrete Blocks in Talagang</title>
+
+  <meta name="description" content="Al Hafiz Blocks Factory, established in 2018 in Talagang, Punjab, Pakistan. Explore concrete blocks, factory photos and contact us for prices, availability and bulk orders.">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://abdullah-malik-tech.github.io/al-hafiz-blocks-factory/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Al Hafiz Blocks Factory | Talagang">
+  <meta property="og:description" content="Concrete block manufacturing in Talagang, Punjab, Pakistan. Contact us for prices and bulk orders.">
+  <meta property="og:url" content="https://abdullah-malik-tech.github.io/al-hafiz-blocks-factory/">
+  <meta property="og:image" content="https://abdullah-malik-tech.github.io/al-hafiz-blocks-factory/B1.jpg">
+
+  <link rel="icon" type="image/jpeg" href="./al%20hafiz%20blocks%20logo.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Al Hafiz Blocks Factory",
+    "description": "Concrete block manufacturing business established in 2018 in Talagang, Punjab, Pakistan.",
+    "url": "https://abdullah-malik-tech.github.io/al-hafiz-blocks-factory/",
+    "image": "https://abdullah-malik-tech.github.io/al-hafiz-blocks-factory/B1.jpg",
+    "telephone": "+923022547965",
+    "foundingDate": "2018",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Talagang",
+      "addressRegion": "Punjab",
+      "addressCountry": "PK"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "Talagang and surrounding areas, Punjab, Pakistan"
+    }
   }
+  </script>
 
-  .gallery-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #101c2b;
+      --navy2: #192b3e;
+      --gold: #e7ad43;
+      --bg: #ffffff;
+      --surface: #ffffff;
+      --soft: #f6f4ef;
+      --text: #101c2b;
+      --muted: #687483;
+      --border: #e5e4df;
+      --header: #ffffff;
+      --shadow: 0 8px 26px #101c2b0c;
+    }
 
-@media (max-width: 760px) {
-  .nav {
-    padding: 12px 0;
-    flex-wrap: wrap;
-  }
+    body.dark-mode {
+      color-scheme: dark;
+      --bg: #0b1220;
+      --surface: #111b2b;
+      --soft: #0e1726;
+      --text: #edf2f7;
+      --muted: #b6c2d1;
+      --border: #2c3a4c;
+      --header: #111b2b;
+      --shadow: 0 8px 26px #00000024;
+    }
 
-  .navlinks {
-    order: 3;
-    width: 100%;
-    justify-content: space-between;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-  .navlinks a {
-    font-size: 11px;
-  }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
 
-  .nav > .btn {
-    padding: 10px 12px;
-  }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      overflow-wrap: break-word;
+      transition: background .2s, color .2s;
+    }
 
-  .hero-grid {
-    grid-template-columns: 1fr;
-    padding-top: 60px;
-    padding-bottom: 50px;
-    gap: 15px;
-  }
+    img {
+      max-width: 100%;
+    }
 
-  .block-art {
-    min-height: 270px;
-  }
+    a {
+      color: inherit;
+    }
 
-  .concrete-block {
-    width: 190px;
-    height: 78px;
-  }
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
 
-  .hole {
-    width: 45px;
-    height: 32px;
-  }
+    button {
+      font: inherit;
+    }
 
-  .stats-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin-inline: auto;
+    }
 
-  .stat {
-    border-right: 0;
-    border-bottom: 1px solid #b9852b;
-    padding: 10px;
-  }
+    .topbar {
+      background: var(--navy);
+      color: #e1e8f0;
+      padding: 7px 12px;
+      font-size: 11px;
+      text-align: center;
+      letter-spacing: 1.2px;
+    }
 
-  .stat:last-child {
-    border: 0;
-  }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header);
+      border-bottom: 1px solid var(--border);
+    }
 
-  section.content-section {
-    padding: 58px 0;
-  }
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding-block: 10px;
+    }
 
-  .cards,
-  .about-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      min-width: 0;
+      flex-shrink: 0;
+    }
 
-  .gallery-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-  }
+    .logo {
+      width: 46px;
+      height: 46px;
+      flex: 0 0 46px;
+      border-radius: 5px;
+      object-fit: contain;
+      background: white;
+    }
 
-  .gallery-grid img {
-    height: 180px;
-  }
+    .brand strong {
+      display: block;
+      font-size: 13px;
+      line-height: 1.4;
+    }
 
-  .about-grid {
-    gap: 30px;
-  }
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+    }
 
-  .cta-grid,
-  .footer-grid {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
+    .navlinks {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
 
-@media (max-width: 380px) {
-  .brand strong {
-    font-size: 12px;
-  }
+    .navlinks a {
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+    }
 
-  .brand small {
-    font-size: 9px;
-    letter-spacing: 1px;
-  }
+    .navlinks a:hover {
+      color: #b17a1d;
+    }
 
-  .hero-actions .btn {
-    width: 100%;
-  }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
 
-  .gallery-grid img {
-    height: 145px;
-  }
+    .theme-toggle {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 42px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 20px;
+    }
 
-  .wa {
-    right: 12px;
-    bottom: 12px;
-    padding: 10px 13px;
-  }
-}
-    .existing-class {
-    color: black;
-  }
+    .theme-toggle:hover {
+      border-color: var(--gold);
+    }
 
-  /* Yahan naya CSS paste karo */
-  .hero-photo {
-    position: relative;
-    width: 100%;
-    min-height: 340px;
-  }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      min-height: 44px;
+      padding: 11px 17px;
+      background: var(--gold);
+      color: #101c2b;
+      border: 1px solid var(--gold);
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background .2s, transform .2s;
+    }
 
-</style>
-</style>
+    .btn:hover {
+      background: #f3c46e;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border-color: #758395;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--navy);
+    }
+
+    .hero {
+      background:
+        radial-gradient(ellipse at 85% 30%, #34485a 0%, transparent 40%),
+        linear-gradient(120deg, #101c2b, #192b3e 75%, #263b4d);
+      color: white;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 48px;
+      padding-block: 76px;
+    }
+
+    .eyebrow {
+      color: #bd8525;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .hero .eyebrow {
+      color: var(--gold);
+    }
+
+    h1 {
+      margin: 18px 0;
+      font-size: clamp(36px, 5vw, 62px);
+      line-height: 1.08;
+      letter-spacing: -1.8px;
+    }
+
+    h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      color: #d4dce5;
+      max-width: 520px;
+      font-size: 16px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .hero-note {
+      margin-top: 24px;
+      color: #c0ccd8;
+      font-size: 12px;
+      letter-spacing: .4px;
+    }
+
+    .hero-photo {
+      position: relative;
+      min-width: 0;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #101c2b;
+      box-shadow: 0 20px 45px #0004;
+    }
+
+    .hero-photo img {
+      display: block;
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+    }
+
+    .hero-photo-label {
+      position: absolute;
+      inset: auto 0 0;
+      padding: 30px 16px 15px;
+      background: linear-gradient(transparent, #101c2bf0);
+      color: white;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .stats {
+      background: var(--gold);
+      color: #101c2b;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      padding-block: 20px;
+      text-align: center;
+    }
+
+    .stat {
+      padding: 7px 12px;
+      border-right: 1px solid #b9852b;
+    }
+
+    .stat:last-child {
+      border-right: 0;
+    }
+
+    .stat strong,
+    .stat span {
+      display: block;
+    }
+
+    .stat strong {
+      font-size: 15px;
+    }
+
+    .stat span {
+      font-size: 11px;
+    }
+
+    .content-section {
+      padding-block: 76px;
+      background: var(--bg);
+    }
+
+    .section-head {
+      max-width: 700px;
+      margin-bottom: 32px;
+    }
+
+    .section-head h2,
+    .about-copy h2 {
+      margin: 9px 0 13px;
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.2;
+      letter-spacing: -.8px;
+    }
+
+    .section-head p,
+    .about-copy p {
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      min-width: 0;
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .card-number {
+      color: #bd8525;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+    }
+
+    .card h3 {
+      margin: 12px 0 7px;
+      font-size: 18px;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .about {
+      background: var(--soft);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .about-visual {
+      min-height: 290px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border-radius: 8px;
+      background: linear-gradient(145deg, #101c2b, #263b4d);
+      color: white;
+      overflow: hidden;
+    }
+
+    .about-visual strong {
+      color: var(--gold);
+      font-size: clamp(34px, 4vw, 48px);
+      line-height: 1.2;
+    }
+
+    .about-visual span {
+      color: #d6dce3;
+      font-size: 13px;
+    }
+
+    .check-list {
+      padding: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      margin-block: 12px;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      margin-right: 10px;
+      color: #bd8525;
+      font-weight: 900;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .gallery-grid img {
+      display: block;
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--soft);
+      transition: transform .2s;
+    }
+
+    .gallery-grid img:hover {
+      transform: translateY(-3px);
+    }
+
+    .cta {
+      padding-block: 52px;
+      background: var(--navy);
+      color: white;
+    }
+
+    .cta-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .cta h2 {
+      margin: 8px 0;
+      font-size: clamp(26px, 4vw, 37px);
+      line-height: 1.2;
+    }
+
+    .cta p {
+      margin-bottom: 0;
+      color: #c5cfda;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .contact-item {
+      min-width: 0;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .contact-item h3 {
+      margin: 0 0 7px;
+      font-size: 17px;
+    }
+
+    .contact-item p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-item .btn {
+      margin-top: 5px;
+    }
+
+    .map-card {
+      margin-top: 28px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--surface);
+    }
+
+    .map-card h3 {
+      margin: 6px 0;
+    }
+
+    .map-card p {
+      color: var(--muted);
+    }
+
+    .map-card iframe {
+      display: block;
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    /* Customer review carousel */
+
+    .reviews-section {
+      background: var(--soft);
+    }
+
+    .reviews-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .reviews-heading h2 {
+      margin: 9px 0;
+      font-size: clamp(27px, 4vw, 39px);
+      line-height: 1.2;
+    }
+
+    .reviews-heading p {
+      color: var(--muted);
+    }
+
+    .reviews-slider {
+      position: relative;
+      padding-inline: 42px;
+    }
+
+    .reviews-viewport {
+      width: 100%;
+      overflow: hidden;
+      padding: 5px 2px 14px;
+    }
+
+    .reviews-track {
+      display: flex;
+      align-items: stretch;
+      gap: 18px;
+      will-change: transform;
+    }
+
+    .review-card {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 calc((100% - 36px) / 3);
+      min-width: 0;
+      padding: 23px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .review-stars {
+      color: #d99b22;
+      font-size: 17px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .review-card h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      line-height: 1.4;
+    }
+
+    .review-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .review-label {
+      display: inline-block;
+      align-self: flex-start;
+      margin-top: 18px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      background: var(--soft);
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .review-arrow {
+      position: absolute;
+      z-index: 2;
+      top: 45%;
+      transform: translateY(-50%);
+      width: 35px;
+      height: 42px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--surface);
+      color: var(--text);
+      font-size: 25px;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+    }
+
+    .review-arrow:hover {
+      background: var(--gold);
+      color: #101c2b;
+    }
+
+    .review-prev {
+      left: 0;
+    }
+
+    .review-next {
+      right: 0;
+    }
+
+    .review-note {
+      margin: 15px auto 0;
+      max-width: 720px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    footer {
+      padding-block: 30px;
+      background: #0a1420;
+      color: white;
+    }
+
+    .footer-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      color: #b8c4d0;
+      font-size: 12px;
+    }
+
+    footer a {
+      color: var(--gold);
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .wa {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 90;
+      padding: 11px 15px;
+      border-radius: 30px;
+      background: #168b58;
+      color: white;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
+      box-shadow: 0 5px 20px #0003;
+    }
+
+    body.dark-mode .card,
+    body.dark-mode .contact-item,
+    body.dark-mode .review-card,
+    body.dark-mode .map-card {
+      color: var(--text);
+    }
+
+    @media (max-width: 1000px) {
+      .nav {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .navlinks {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        padding-block: 5px;
+      }
+
+      .hero-grid {
+        gap: 28px;
+      }
+
+      .hero-photo img {
+        height: 340px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .review-card {
+        flex-basis: calc((100% - 18px) / 2);
+      }
+    }
+
+    @media (max-width: 760px) {
+      html {
+        scroll-padding-top: 125px;
+      }
+
+      .container {
+        width: calc(100% - 32px);
+      }
+
+      .nav {
+        min-height: auto;
+        padding-block: 10px;
+      }
+
+      .brand {
+        gap: 8px;
+      }
+
+      .logo {
+        width: 39px;
+        height: 39px;
+        flex-basis: 39px;
+      }
+
+      .brand strong {
+        font-size: 11px;
+      }
+
+      .brand small {
+        font-size: 9px;
+        letter-spacing: 1px;
+      }
+
+      .nav-actions {
+        gap: 7px;
+      }
+
+      .theme-toggle {
+        width: 38px;
+        height: 38px;
+        flex-basis: 38px;
+        font-size: 18px;
+      }
+
+      .nav-actions .btn {
+        min-height: 38px;
+        padding: 8px 10px;
+        font-size: 11px;
+      }
+
+      .navlinks {
+        gap: 12px;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 8px 0 5px;
+      }
+
+      .navlinks a {
+        flex-shrink: 0;
+        font-size: 12px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-block: 48px;
+      }
+
+      h1 {
+        font-size: clamp(36px, 9vw, 53px);
+        letter-spacing: -1px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .hero-photo img {
+        height: clamp(230px, 65vw, 350px);
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+        padding-block: 10px;
+      }
+
+      .stat {
+        padding: 11px 5px;
+        border-right: 0;
+        border-bottom: 1px solid #b9852b;
+      }
+
+      .stat:last-child {
+        border-bottom: 0;
+      }
+
+      .content-section {
+        padding-block: 52px;
+      }
+
+      .cards,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        gap: 14px;
+      }
+
+      .card {
+        padding: 21px;
+      }
+
+      .about-grid {
+        gap: 25px;
+      }
+
+      .about-visual {
+        min-height: 230px;
+      }
+
+      .gallery-grid {
+        gap: 10px;
+      }
+
+      .gallery-grid img {
+        height: clamp(125px, 37vw, 200px);
+      }
+
+      .cta-grid,
+      .footer-grid {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .contact-item {
+        padding: 19px;
+      }
+
+      .map-card {
+        padding: 13px;
+      }
+
+      .map-card iframe {
+        height: 250px;
+      }
+
+      .reviews-section {
+        overflow: hidden;
+      }
+
+      .reviews-slider {
+        padding-inline: 29px;
+      }
+
+      .reviews-track {
+        gap: 12px;
+      }
+
+      .review-card {
+        flex-basis: 100%;
+        padding: 20px;
+      }
+
+      .review-arrow {
+        width: 28px;
+        height: 35px;
+        font-size: 22px;
+      }
+
+      .wa {
+        right: 12px;
+        bottom: 12px;
+        padding: 10px 12px;
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .container {
+        width: calc(100% - 24px);
+      }
+
+      .brand strong {
+        font-size: 10px;
+      }
+
+      .nav-actions .btn {
+        padding-inline: 7px;
+        font-size: 10px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="topbar">
-  ESTABLISHED IN 2018 &nbsp; | &nbsp; TALAGANG, PUNJAB, PAKISTAN
-</div>
-
-<header>
-  <div class="container nav">
-
-    <a class="brand" href="#home">
-      <img
-        src="./al%20hafiz%20blocks%20logo.jpg"
-        alt="Al Hafiz Blocks Factory Logo"
-        class="logo"
-      >
-
-      <span>
-        <strong>AL HAFIZ BLOCKS FACTORY</strong>
-        <small>BUILT ON TRUST</small>
-      </span>
-    </a>
-
-    <nav class="navlinks" aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#products">Products</a>
-      <a href="#quality">Our Approach</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <a class="btn" href="#contact">Get in Touch ↗</a>
-
+  <div class="topbar">
+    ESTABLISHED IN 2018 &nbsp; | &nbsp; TALAGANG, PUNJAB, PAKISTAN
   </div>
-</header>
 
-<main>
+  <header>
+    <div class="container nav">
 
-<!-- HERO SECTION -->
-<section class="hero" id="home">
-  <div class="container hero-grid">
+      <a class="brand" href="#home" aria-label="Al Hafiz Blocks Factory home">
+        <img
+          class="logo"
+          src="./al%20hafiz%20blocks%20logo.jpg"
+          alt="Al Hafiz Blocks Factory logo"
+          width="46"
+          height="46"
+        >
+        <span>
+          <strong>AL HAFIZ BLOCKS FACTORY</strong>
+          <small>BUILT ON TRUST</small>
+        </span>
+      </a>
 
-    <div>
-      <div class="eyebrow">
-        Your Local Concrete Block Manufacturer
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#quality">Our Approach</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Switch to dark theme"
+          aria-pressed="false"
+          title="Change theme"
+        >🌙</button>
+        <a class="btn" href="#contact">Contact ↗</a>
       </div>
 
-      <h1>
-        Building<br>
-        Strong <span>Foundations.</span>
-      </h1>
+    </div>
+  </header>
 
-      <p>
-        Concrete block manufacturing for construction projects
-        in Talagang and surrounding areas. We aim to deliver
-        dependable products and straightforward service.
-      </p>
+  <main>
 
-      <div class="hero-actions">
-        <a class="btn" href="#contact">
-          Enquire About Blocks ↗
-        </a>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
 
-        <a class="btn btn-outline" href="#about">
-          Discover Our Factory
-        </a>
+        <div>
+          <div class="eyebrow">Your Local Concrete Block Manufacturer</div>
+
+          <h1>
+            Building Strong <span>Foundations.</span>
+          </h1>
+
+          <p>
+            Al Hafiz Blocks Factory manufactures concrete blocks in
+            Talagang, Punjab, Pakistan. Contact us to discuss block
+            dimensions, current prices, availability and bulk orders.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#contact">Enquire About Blocks ↗</a>
+            <a class="btn btn-outline" href="#gallery">View Factory Photos</a>
+          </div>
+
+          <div class="hero-note">
+            EST. 2018 &nbsp; · &nbsp; TALAGANG, PAKISTAN
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <img
+            src="./B1.jpg"
+            alt="Al Hafiz Blocks Factory in Talagang, Pakistan"
+            fetchpriority="high"
+            width="800"
+            height="600"
+          >
+          <div class="hero-photo-label">
+            AL HAFIZ BLOCKS FACTORY · EST. 2018
+          </div>
+        </div>
+
       </div>
-
-      <div class="hero-note">
-        EST. 2018 &nbsp; · &nbsp; MACHINE-MADE PRODUCTION
-      </div>
-    </div>
-
-    <div class="hero-photo">
-  <img src="./A1.jpg"
-       alt="Al Hafiz Blocks Factory in Talagang">
-  <div class="hero-photo-label">
-    AL HAFIZ BLOCKS FACTORY · EST. 2018
-  </div>
-</div>
-</section>
-
-<!-- BUSINESS HIGHLIGHTS -->
-<div class="stats">
-  <div class="container stats-grid">
-
-    <div class="stat">
-      <strong>EST. 2018</strong>
-      <span>Established in Talagang</span>
-    </div>
-
-    <div class="stat">
-      <strong>Machine-Made</strong>
-      <span>Concrete block production</span>
-    </div>
-
-    <div class="stat">
-      <strong>Customer Focus</strong>
-      <span>Service and reliable supply</span>
-    </div>
-
-  </div>
-</div>
-
-<!-- PRODUCTS -->
-<section class="content-section" id="products">
-  <div class="container">
-
-    <div class="section-head">
-      <div class="eyebrow">What We Do</div>
-
-      <h2>Concrete Blocks for Your Construction Needs</h2>
-
-      <p>
-        Explore our manufacturing services and contact us
-        to confirm available block types, dimensions and prices.
-      </p>
-    </div>
-
-    <div class="cards">
-
-      <article class="card">
-        <div class="card-number">01 / PRODUCTS</div>
-
-        <h3>Concrete Blocks</h3>
-
-        <p>
-          Our concrete blocks measure 6 inches wide × 8 inches
-          high × 12 inches long. Contact us to confirm availability
-          and pricing.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="card-number">02 / PRODUCTION</div>
-
-        <h3>Machine-Made Manufacturing</h3>
-
-        <p>
-          A structured production process with attention to
-          material use and consistent dimensions.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="card-number">03 / ORDERS</div>
-
-        <h3>Bulk Order Enquiries</h3>
-
-        <p>
-          Discuss required quantities, current availability,
-          pricing and delivery arrangements with us.
-        </p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="content-section about" id="about">
-  <div class="container about-grid">
-
-    <div class="about-visual">
-      <strong>EST. 2018</strong>
-      <span>AL HAFIZ BLOCKS FACTORY</span>
-      <span>Talagang, Punjab, Pakistan</span>
-    </div>
-
-    <div class="about-copy">
-      <div class="eyebrow">About Our Factory</div>
-
-      <h2>Built on Experience. Focused on Quality.</h2>
-
-      <p>
-        Established in 2018, Al Hafiz Blocks Factory is a
-        concrete block manufacturing business based in Talagang,
-        Punjab, Pakistan.
-      </p>
-
-      <p>
-        We work with construction customers, including house
-        builders, contractors, masons and building-material dealers.
-        Our goal is to provide clear communication, fair dealing
-        and dependable service.
-      </p>
-
-      <ul class="check-list">
-        <li>Machine-made concrete block production</li>
-        <li>Attention to material management and wastage</li>
-        <li>Focus on dimensions and proper curing</li>
-        <li>Customer enquiries and bulk order discussions</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<!-- QUALITY AND APPROACH -->
-<section class="content-section" id="quality">
-  <div class="container">
-
-    <div class="section-head">
-      <div class="eyebrow">Our Approach</div>
-
-      <h2>What Matters in Every Order</h2>
-
-      <p>
-        We believe a dependable manufacturing business is built
-        through careful processes and good customer relationships.
-      </p>
-    </div>
-
-    <div class="cards">
-
-      <article class="card">
-        <div class="card-number">01</div>
-
-        <h3>Consistent Quality</h3>
-
-        <p>
-          Attention to material proportions, block dimensions
-          and appropriate curing practices.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="card-number">02</div>
-
-        <h3>Cost-Conscious Production</h3>
-
-        <p>
-          Responsible management of cement, sand, crush
-          and production waste.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="card-number">03</div>
-
-        <h3>Clear Communication</h3>
-
-        <p>
-          Discuss product availability, quantities, pricing
-          and delivery before confirming an order.
-        </p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- SINGLE GALLERY SECTION -->
-<section class="content-section" id="gallery">
-  <div class="container">
-
-    <div class="section-head">
-      <div class="eyebrow">Our Factory</div>
-
-      <h2>Al Hafiz Blocks Factory Gallery</h2>
-
-      <p>
-        A closer look at Al Hafiz Blocks Factory and our
-        concrete block production.
-      </p>
-    </div>
-
-    <div class="gallery-grid">
-
-      <img
-        src="./B1.jpg"
-        alt="Al Hafiz Blocks Factory photo 1"
-        loading="lazy"
-      >
-
-      <img
-        src="./B2.jpg"
-        alt="Al Hafiz Blocks Factory photo 2"
-        loading="lazy"
-      >
-
-      <img
-        src="./B3.jpg"
-        alt="Al Hafiz Blocks Factory photo 3"
-        loading="lazy"
-      >
-
-      <img
-        src="./B4.jpg"
-        alt="Al Hafiz Blocks Factory photo 4"
-        loading="lazy"
-      >
-
-    </div>
-  </div>
-</section>
-
-<!-- CALL TO ACTION -->
-<section class="cta">
-  <div class="container cta-grid">
-
-    <div>
-      <div class="eyebrow">Planning a Project?</div>
-
-      <h2>Let's Discuss Your Block Requirements.</h2>
-
-      <p>
-        Contact Al Hafiz Blocks Factory for product details
-        and order enquiries.
-      </p>
-    </div>
-
-    <a class="btn" href="#contact">
-      Contact Our Factory ↗
-    </a>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-
-<section class="content-section" id="contact">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">WE'RE HERE TO HELP</div>
-      <h2>Get in Touch</h2>
-      <p>Need concrete blocks for your project? Contact Al Hafiz Blocks Factory, Talagang.</p>
-    </div>
-
-    <div class="contact-grid">
-      <div class="contact-item">
-        <h3>📞 Call Us</h3>
-        <p>Speak with us about prices, quantities and availability.</p>
-        <a class="btn" href="tel:+923022547965">Call Our Factory ↗</a>
-      </div>
-
-      <div class="contact-item">
-        <h3>💬 WhatsApp Us</h3>
-        <p>Send your requirements directly through WhatsApp.</p>
-        <a class="btn" href="https://wa.me/923022547965"
-           target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
-      </div>
-
-      <div class="contact-item">
-        <h3>📍 Visit Our Factory</h3>
-        <p>Al Hafiz Blocks Factory, Talagang, Punjab, Pakistan.</p>
-        <a class="btn"
-           href="https://www.google.com/maps/place/AL-HAFIZ+BLOCK+FACTORY/@32.9512909,72.4111291,17z/"
-           target="_blank" rel="noopener">Get Directions ↗</a>
-      </div>
-
-      <div class="contact-item">
-        <h3>⭐ Google Reviews</h3>
-        <p>Visit our Google Maps listing to read customer reviews and share your experience.</p>
-        <a class="btn"
-           href="https://www.google.com/maps/place/AL-HAFIZ+BLOCK+FACTORY/@32.9512909,72.4111291,17z/"
-           target="_blank" rel="noopener">Read Google Reviews ↗</a>
-      </div>
-    </div>
-
-    <div class="section-head" style="margin-top:55px">
-      <div class="eyebrow">CUSTOMER FEEDBACK</div>
-      <h2>What Customers Value</h2>
-      
-<!-- AL HAFIZ FACTORY HIGHLIGHTS -->
-<section id="factory-highlights">
-  <div class="fh-container">
-    <div class="fh-heading">
-      <span class="fh-eyebrow">AL HAFIZ BLOCKS FACTORY</span>
-      <h2>What Customers Value</h2>
-      <p>Quality, service aur construction ki requirements ke liye hum se contact karein.</p>
-    </div>
-
-    <div class="fh-slider" id="fhSlider">
-      <button class="fh-arrow fh-prev" id="fhPrev" aria-label="Previous cards" type="button">‹</button>
-
-      <div class="fh-viewport">
-        <div class="fh-track" id="fhTrack">
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Quality Blocks</h3><p>Construction ke liye suitable blocks select karna bohat zaroori hai.</p><div class="fh-author"><span>AK</span><div><strong>Ahmed Khan</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Factory Service</h3><p>Rates aur availability ki information ke liye factory se directly contact karein.</p><div class="fh-author"><span>MU</span><div><strong>Muhammad Usman</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Construction Needs</h3><p>Apne project ke mutabiq block size aur quantity confirm karein.</p><div class="fh-author"><span>AR</span><div><strong>Ali Raza</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Since 2018</h3><p>Al Hafiz Blocks Factory 2018 se block manufacturing mein kaam kar rahi hai.</p><div class="fh-author"><span>BA</span><div><strong>Bilal Ahmed</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Easy Contact</h3><p>Call ya WhatsApp par apni requirements share karke details hasil karein.</p><div class="fh-author"><span>UT</span><div><strong>Usman Tariq</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Block Dimensions</h3><p>Available block dimensions aur specifications pehle confirm karein.</p><div class="fh-author"><span>HA</span><div><strong>Hassan Ali</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Factory Location</h3><p>Google Maps se factory ki location aur directions check kar sakte hain.</p><div class="fh-author"><span>HI</span><div><strong>Hamza Iqbal</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Project Planning</h3><p>Construction start karne se pehle required blocks ki quantity plan karein.</p><div class="fh-author"><span>SM</span><div><strong>Saad Malik</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Local Factory</h3><p>Talagang mein factory se direct information hasil karein.</p><div class="fh-author"><span>FH</span><div><strong>Fahad Hussain</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Material Selection</h3><p>Construction material choose karte waqt size aur suitability ko importance dein.</p><div class="fh-author"><span>US</span><div><strong>Usman Shah</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Quick Inquiry</h3><p>Apne sawalat ke liye call karein ya WhatsApp par message bhejein.</p><div class="fh-author"><span>ZA</span><div><strong>Zain Abbas</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Order Planning</h3><p>Order se pehle rates, quantity aur availability confirm karna behtar hai.</p><div class="fh-author"><span>AH</span><div><strong>Ahsan Raza</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Building Projects</h3><p>Apne building project ki requirements ke mutabiq options discuss karein.</p><div class="fh-author"><span>DA</span><div><strong>Danish Akram</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Factory Information</h3><p>Location aur available blocks ki details website par check karein.</p><div class="fh-author"><span>WA</span><div><strong>Waqas Ahmed</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Block Options</h3><p>Apni construction needs ke liye suitable block options maloom karein.</p><div class="fh-author"><span>TJ</span><div><strong>Talha Javed</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Direct Dealing</h3><p>Rates aur supply details factory se directly confirm karein.</p><div class="fh-author"><span>SK</span><div><strong>Shahzaib Khan</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Easy Directions</h3><p>Visit plan karne se pehle Google Maps par location dekh lein.</p><div class="fh-author"><span>UF</span><div><strong>Umar Farooq</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Construction Materials</h3><p>Block size aur quantity project ki requirement ke mutabiq choose karein.</p><div class="fh-author"><span>HM</span><div><strong>Haris Mahmood</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>WhatsApp Contact</h3><p>Apni requirements WhatsApp par share karke information lein.</p><div class="fh-author"><span>NA</span><div><strong>Noman Aslam</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Stock Availability</h3><p>Current stock aur availability ke liye factory se contact karein.</p><div class="fh-author"><span>KA</span><div><strong>Kamran Akhtar</strong><small>Factory highlight</small></div></div></article>
-
-          <article class="fh-card"><div class="fh-stars">★★★★★</div><h3>Al Hafiz Blocks Factory</h3><p>Apne construction project ke liye blocks ki details hum se maloom karein.</p><div class="fh-author"><span>AF</span><div><strong>Abdullah Farooq</strong><small>Factory information</small></div></div></article>
-
+    </section>
+
+    <div class="stats">
+      <div class="container stats-grid">
+        <div class="stat">
+          <strong>EST. 2018</strong>
+          <span>Established in Talagang</span>
+        </div>
+        <div class="stat">
+          <strong>Concrete Blocks</strong>
+          <span>Manufacturing and enquiries</span>
+        </div>
+        <div class="stat">
+          <strong>Direct Contact</strong>
+          <span>Discuss your requirements</span>
         </div>
       </div>
-
-      <button class="fh-arrow fh-next" id="fhNext" aria-label="Next cards" type="button">›</button>
     </div>
 
-    <p class="fh-note">Explore Al Hafiz Blocks Factory highlights</p>
-  </div>
-</section>
+    <section class="content-section" id="products">
+      <div class="container">
 
-<style>
-#factory-highlights {
-  padding: 70px 0;
-  overflow: hidden;
-  background: var(--cream, #f8f7f3);
-}
-.fh-container {
-  max-width: 1200px;
-  width: 92%;
-  margin: auto;
-}
-.fh-heading {
-  text-align: center;
-  margin-bottom: 35px;
-}
-.fh-eyebrow {
-  color: #a87908;
-  font-weight: 800;
-  font-size: 12px;
-  letter-spacing: 2px;
-}
-.fh-heading h2 {
-  margin: 10px 0;
-  font-size: clamp(25px, 4vw, 38px);
-  color: var(--navy, #14263d);
-}
-.fh-heading p, .fh-note {
-  color: var(--muted, #6b7280);
-  line-height: 1.7;
-}
-.fh-slider {
-  position: relative;
-  padding: 0 32px;
-}
-.fh-viewport {
-  width: 100%;
-  overflow: hidden;
-}
-.fh-track {
-  display: flex;
-  align-items: stretch;
-  gap: 16px;
-  transform: translateX(0);
-}
-.fh-card {
-  flex: 0 0 calc((100% - 64px) / 5);
-  min-width: 0;
-  box-sizing: border-box;
-  padding: 22px 17px;
-  border: 1px solid var(--border, #e4e1d9);
-  border-radius: 14px;
-  background: var(--white, #fff);
-  box-shadow: 0 7px 22px #00000008;
-  display: flex;
-  flex-direction: column;
-}
-.fh-stars {
-  color: #eab308;
-  letter-spacing: 2px;
-  font-size: 17px;
-  margin-bottom: 14px;
-}
-.fh-card h3 {
-  color: var(--navy, #14263d);
-  font-size: 17px;
-  line-height: 1.4;
-  margin: 0 0 10px;
-}
-.fh-card p {
-  color: var(--muted, #6b7280);
-  font-size: 14px;
-  line-height: 1.7;
-  margin: 0;
-  flex: 1;
-}
-.fh-author {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border-top: 1px solid var(--border, #e4e1d9);
-  margin-top: 20px;
-  padding-top: 14px;
-}
-.fh-author > span {
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #f4c44e;
-  color: #172235;
-  font-size: 12px;
-  font-weight: 800;
-}
-.fh-author strong, .fh-author small {
-  display: block;
-}
-.fh-author strong {
-  color: var(--navy, #14263d);
-  font-size: 12px;
-  line-height: 1.4;
-}
-.fh-author small {
-  margin-top: 4px;
-  font-size: 11px;
-  color: var(--muted, #6b7280);
-}
-.fh-arrow {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 36px;
-  height: 40px;
-  border: 1px solid var(--border, #e4e1d9);
-  border-radius: 50%;
-  background: var(--white, #fff);
-  color: var(--navy, #14263d);
-  font-size: 27px;
-  cursor: pointer;
-  box-shadow: 0 3px 10px #00000012;
-}
-.fh-arrow:hover {
-  background: #f4c44e;
-  color: #172235;
-}
-.fh-prev { left: 0; }
-.fh-next { right: 0; }
-.fh-note {
-  margin-top: 22px;
-  text-align: center;
-  font-size: 13px;
-}
-body.dark-mode #factory-highlights {
-  background: #0b1220;
-}
-body.dark-mode .fh-card {
-  background: #111b2b;
-  border-color: #2c3a4c;
-}
-body.dark-mode .fh-heading h2,
-body.dark-mode .fh-card h3,
-body.dark-mode .fh-author strong {
-  color: #edf2f7;
-}
-body.dark-mode .fh-arrow {
-  background: #111b2b;
-  color: #edf2f7;
-  border-color: #526176;
-}
-@media (max-width: 1050px) {
-  .fh-card { flex-basis: calc((100% - 48px) / 4); }
-}
-@media (max-width: 780px) {
-  .fh-card { flex-basis: calc((100% - 32px) / 3); }
-}
-@media (max-width: 560px) {
-  #factory-highlights { padding: 48px 0; }
-  .fh-slider { padding: 0 25px; }
-  .fh-track { gap: 12px; }
-  .fh-card { flex-basis: calc((100% - 12px) / 2); padding: 17px 12px; }
-  .fh-card h3 { font-size: 15px; }
-  .fh-card p { font-size: 13px; }
-  .fh-author { gap: 7px; }
-  .fh-author > span { width: 32px; height: 32px; font-size: 10px; }
-  .fh-author strong { font-size: 11px; }
-  .fh-arrow { width: 29px; height: 34px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .fh-track { scroll-behavior: auto; }
-}
-</style>
+        <div class="section-head">
+          <div class="eyebrow">Our Products</div>
+          <h2>Concrete Blocks for Construction</h2>
+          <p>
+            Contact us to confirm available products, dimensions,
+            current prices and order quantities.
+          </p>
+        </div>
 
-<script>
-(() => {
-  const track = document.getElementById("fhTrack");
-  const slider = document.getElementById("fhSlider");
-  const next = document.getElementById("fhNext");
-  const prev = document.getElementById("fhPrev");
+        <div class="cards">
+          <article class="card">
+            <div class="card-number">01 / PRODUCTS</div>
+            <h3>Concrete Blocks</h3>
+            <p>
+              Our listed block dimensions are 6 inches wide,
+              8 inches high and 12 inches long. Please confirm
+              specifications and availability before ordering.
+            </p>
+          </article>
 
-  if (!track || !slider || !next || !prev) return;
+          <article class="card">
+            <div class="card-number">02 / MANUFACTURING</div>
+            <h3>Block Production</h3>
+            <p>
+              Contact our factory to discuss block requirements,
+              dimensions and the quantities needed for your project.
+            </p>
+          </article>
 
-  let timer = null;
-  let busy = false;
+          <article class="card">
+            <div class="card-number">03 / ORDERS</div>
+            <h3>Bulk Order Enquiries</h3>
+            <p>
+              Discuss required quantities, pricing, stock availability
+              and delivery arrangements directly with us.
+            </p>
+          </article>
+        </div>
 
-  function stepSize() {
-    const card = track.querySelector(".fh-card");
-    if (!card) return 0;
-    const gap = parseFloat(getComputedStyle(track).gap) || 0;
-    return card.getBoundingClientRect().width + gap;
-  }
-
-  function nextCard() {
-    if (busy) return;
-    const distance = stepSize();
-    const first = track.firstElementChild;
-    if (!distance || !first) return;
-
-    busy = true;
-    track.style.transition = "transform 500ms ease";
-    track.style.transform = `translateX(-${distance}px)`;
-
-    const finish = event => {
-      if (event.target !== track || event.propertyName !== "transform") return;
-      track.removeEventListener("transitionend", finish);
-      track.appendChild(first);
-      track.style.transition = "none";
-      track.style.transform = "translateX(0)";
-      track.offsetHeight;
-      track.style.transition = "transform 500ms ease";
-      busy = false;
-    };
-
-    track.addEventListener("transitionend", finish);
-  }
-
-  function previousCard() {
-    if (busy) return;
-    const last = track.lastElementChild;
-    const distance = stepSize();
-    if (!distance || !last) return;
-
-    busy = true;
-    track.style.transition = "none";
-    track.insertBefore(last, track.firstElementChild);
-    track.style.transform = `translateX(-${distance}px)`;
-    track.offsetHeight;
-    track.style.transition = "transform 500ms ease";
-
-    requestAnimationFrame(() => {
-      track.style.transform = "translateX(0)";
-    });
-
-    const finish = event => {
-      if (event.target !== track || event.propertyName !== "transform") return;
-      track.removeEventListener("transitionend", finish);
-      busy = false;
-    };
-
-    track.addEventListener("transitionend", finish);
-  }
-
-  function stop() {
-    clearInterval(timer);
-  }
-
-  function start() {
-    stop();
-    timer = setInterval(nextCard, 3000);
-  }
-
-  next.addEventListener("click", () => {
-    nextCard();
-    start();
-  });
-
-  prev.addEventListener("click", () => {
-    previousCard();
-    start();
-  });
-
-  slider.addEventListener("mouseenter", stop);
-  slider.addEventListener("mouseleave", start);
-  slider.addEventListener("focusin", stop);
-  slider.addEventListener("focusout", event => {
-    if (!slider.contains(event.relatedTarget)) start();
-  });
-
-  start();
-})();
-</script>
-<!-- END FACTORY HIGHLIGHTS -->
-      
-    <div class="map-card">
-      <div>
-        <div class="eyebrow">FIND US</div>
-        <h3>Visit Al Hafiz Blocks Factory</h3>
-        <p>Talagang, Punjab, Pakistan</p>
       </div>
-      <iframe
-        title="Al Hafiz Blocks Factory location map"
-        src="https://www.google.com/maps?q=AL-HAFIZ%20BLOCK%20FACTORY%20Talagang&output=embed"
-        width="100%" height="260"
-        style="border:0;border-radius:10px"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        allowfullscreen>
-      </iframe>
+    </section>
+
+    <section class="content-section about" id="about">
+      <div class="container about-grid">
+
+        <div class="about-visual">
+          <strong>EST. 2018</strong>
+          <span>AL HAFIZ BLOCKS FACTORY</span>
+          <span>Talagang, Punjab, Pakistan</span>
+        </div>
+
+        <div class="about-copy">
+          <div class="eyebrow">About Our Factory</div>
+          <h2>Experience Built Since 2018</h2>
+
+          <p>
+            Al Hafiz Blocks Factory is a concrete block manufacturing
+            business established in 2018 in Talagang, Punjab, Pakistan.
+          </p>
+
+          <p>
+            We welcome enquiries from house builders, contractors,
+            masons and building-material buyers. Contact us to discuss
+            your construction requirements and confirm current details.
+          </p>
+
+          <ul class="check-list">
+            <li>Concrete block manufacturing</li>
+            <li>Block dimensions and product enquiries</li>
+            <li>Quantity and pricing discussions</li>
+            <li>Direct factory contact by phone or WhatsApp</li>
+          </ul>
+
+          <a class="btn" href="#contact">Contact Our Factory ↗</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="content-section" id="quality">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="eyebrow">Our Approach</div>
+          <h2>Planning Your Block Order</h2>
+          <p>
+            Get the information you need before arranging your
+            construction-material order.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-number">01</div>
+            <h3>Confirm Dimensions</h3>
+            <p>
+              Check the required block size and specifications
+              for your particular construction project.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">02</div>
+            <h3>Discuss Quantities</h3>
+            <p>
+              Estimate the number of blocks required and enquire
+              about current stock availability.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">03</div>
+            <h3>Confirm Pricing</h3>
+            <p>
+              Contact the factory to discuss current rates,
+              order details and delivery arrangements.
+            </p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="content-section" id="gallery">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="eyebrow">Our Factory</div>
+          <h2>Al Hafiz Blocks Factory Gallery</h2>
+          <p>
+            Explore photos of our factory and concrete block production.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <img
+            src="./B1.jpg"
+            alt="Al Hafiz Blocks Factory photo 1"
+            loading="lazy"
+            width="400"
+            height="300"
+          >
+          <img
+            src="./B2.jpg"
+            alt="Concrete block manufacturing at Al Hafiz Blocks Factory"
+            loading="lazy"
+            width="400"
+            height="300"
+          >
+          <img
+            src="./B3.jpg"
+            alt="Concrete blocks at the factory in Talagang"
+            loading="lazy"
+            width="400"
+            height="300"
+          >
+          <img
+            src="./B4.jpg"
+            alt="Al Hafiz Blocks Factory production area"
+            loading="lazy"
+            width="400"
+            height="300"
+          >
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-grid">
+        <div>
+          <div class="eyebrow">Planning a Project?</div>
+          <h2>Let's Discuss Your Block Requirements.</h2>
+          <p>Contact us for prices, availability and order enquiries.</p>
+        </div>
+        <a class="btn" href="#contact">Contact Our Factory ↗</a>
+      </div>
+    </section>
+
+    <section class="content-section reviews-section" id="reviews">
+      <div class="container">
+
+        <div class="reviews-heading">
+          <div class="eyebrow">Customer Feedback</div>
+          <h2>What Our Customers Value</h2>
+          <p>
+            Clear information, block specifications and direct
+            communication can help customers plan their orders.
+          </p>
+        </div>
+
+        <div class="reviews-slider" id="reviewsSlider">
+          <button
+            class="review-arrow review-prev"
+            id="reviewPrev"
+            type="button"
+            aria-label="Previous review cards"
+          >‹</button>
+
+          <div class="reviews-viewport">
+            <div class="reviews-track" id="reviewsTrack">
+
+              <article class="review-card">
+                <div class="review-stars" aria-hidden="true">★★★★★</div>
+                <h3>Block Specifications</h3>
+                <p>
+                  Example feedback: clear information about block
+                  dimensions can help customers plan their construction.
+                </p>
+                <span class="review-label">Sample copy — not a real review</span>
+              </article>
+
+              <article class="review-card">
+                <div class="review-stars" aria-hidden="true">★★★★★</div>
+                <h3>Direct Communication</h3>
+                <p>
+                  Example feedback: being able to contact the factory
+                  directly makes it easier to ask about prices and stock.
+                </p>
+                <span class="review-label">Sample copy — not a real review</span>
+              </article>
+
+              <article class="review-card">
+                <div class="review-stars" aria-hidden="true">★★★★★</div>
+                <h3>Order Planning</h3>
+                <p>
+                  Example feedback: confirming quantity and availability
+                  before ordering helps with construction planning.
+                </p>
+                <span class="review-label">Sample copy — not a real review</span>
+              </article>
+
+              <article class="review-card">
+                <div class="review-stars" aria-hidden="true">★★★★★</div>
+                <h3>Factory Location</h3>
+                <p>
+                  Example feedback: having the factory location online
+                  makes it easier to plan a visit.
+                </p>
+                <span class="review-label">Sample copy — not a real review</span>
+              </article>
+
+              <article class="review-card">
+                <div class="review-stars" aria-hidden="true">★★★★★</div>
+                <h3>Pricing Enquiries</h3>
+                <p>
+                  Example feedback: asking about current prices before
+                  placing an order helps buyers plan their budget.
+                </p>
+                <span class="review-label">Sample copy — not a real review</span>
+              </article>
+
+            </div>
+          </div>
+
+          <button
+            class="review-arrow review-next"
+            id="reviewNext"
+            type="button"
+            aria-label="Next review cards"
+          >›</button>
+        </div>
+
+        <p class="review-note">
+          These are sample text drafts, not verified customer testimonials.
+          Replace them with genuine feedback before publishing them as reviews.
+          Customers can also leave feedback through our Google Maps listing.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="content-section" id="contact">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="eyebrow">We're Here to Help</div>
+          <h2>Get in Touch</h2>
+          <p>
+            Contact Al Hafiz Blocks Factory in Talagang for block
+            prices, availability, quantities and order enquiries.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <article class="contact-item">
+            <h3>📞 Call Our Factory</h3>
+            <p>Speak with us about your construction requirements.</p>
+            <a class="btn" href="tel:+923022547965">Call Us ↗</a>
+          </article>
+
+          <article class="contact-item">
+            <h3>💬 WhatsApp Us</h3>
+            <p>Send your requirements directly through WhatsApp.</p>
+            <a
+              class="btn"
+              href="https://wa.me/923022547965"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Chat on WhatsApp ↗</a>
+          </article>
+
+          <article class="contact-item">
+            <h3>📍 Visit Our Factory</h3>
+            <p>Al Hafiz Blocks Factory, Talagang, Punjab, Pakistan.</p>
+            <a
+              class="btn"
+              href="https://www.google.com/maps/place/AL-HAFIZ+BLOCK+FACTORY/@32.9512909,72.4111291,17z/data=!3m1!4b1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Get Directions ↗</a>
+          </article>
+
+          <article class="contact-item">
+            <h3>⭐ Google Reviews</h3>
+            <p>Read available customer reviews or share your own experience.</p>
+            <a
+              class="btn"
+              href="https://www.google.com/maps/place/AL-HAFIZ+BLOCK+FACTORY/@32.9512909,72.4111291,17z/data=!3m1!4b1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Open Google Maps ↗</a>
+          </article>
+
+        </div>
+
+        <div class="map-card">
+          <div class="eyebrow">Find Us</div>
+          <h3>Al Hafiz Blocks Factory</h3>
+          <p>Talagang, Punjab, Pakistan</p>
+
+          <iframe
+            title="Map showing Al Hafiz Blocks Factory in Talagang"
+            src="https://www.google.com/maps?q=32.9512864,72.413704&z=16&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>AL HAFIZ BLOCKS FACTORY</strong>
+        <p>Concrete block manufacturing · Talagang, Pakistan</p>
+        <p>Established in 2018</p>
+      </div>
+      <div>
+        <a href="#home">Back to top ↑</a>
+      </div>
     </div>
-  </div>
-</section>
+  </footer>
 
+  <a
+    class="wa"
+    href="https://wa.me/923022547965"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contact Al Hafiz Blocks Factory on WhatsApp"
+  >WhatsApp ↗</a>
 
-</main>
+  <script>
+    (() => {
+      /* Dark theme toggle: sun and moon icons only */
+      const themeToggle = document.getElementById("themeToggle");
+      const themeColor = document.querySelector('meta[name="theme-color"]');
 
-<!-- FOOTER -->
-<footer>
-  <div class="container footer-grid">
+      function setTheme(isDark) {
+        document.body.classList.toggle("dark-mode", isDark);
 
-    <div>
-      <strong>AL HAFIZ BLOCKS FACTORY</strong>
+        themeToggle.textContent = isDark ? "☀️" : "🌙";
+        themeToggle.setAttribute("aria-pressed", String(isDark));
+        themeToggle.setAttribute(
+          "aria-label",
+          isDark ? "Switch to light theme" : "Switch to dark theme"
+        );
 
-      <p>
-        Concrete block manufacturing · Talagang, Pakistan
-      </p>
-    </div>
+        if (themeColor) {
+          themeColor.setAttribute(
+            "content",
+            isDark ? "#0b1220" : "#101c2b"
+          );
+        }
 
-    <div>
-      <p>EST. 2018</p>
-      <a href="#home">Back to top ↑</a>
-    </div>
+        try {
+          localStorage.setItem("alHafizTheme", isDark ? "dark" : "light");
+        } catch (error) {
+          /* Theme still works if browser storage is unavailable. */
+        }
+      }
 
-  </div>
-</footer>
+      let savedTheme = null;
 
-const themeToggle = document.getElementById("themeToggle");
+      try {
+        savedTheme = localStorage.getItem("alHafizTheme");
+      } catch (error) {
+        savedTheme = null;
+      }
 
-function updateThemeButton() {
-  const isDark = document.body.classList.contains("dark-mode");
+      setTheme(savedTheme === "dark");
 
-  themeToggle.textContent = isDark
-    ? "☀️ Light Mode"
-    : "🌙 Dark Mode";
+      themeToggle.addEventListener("click", () => {
+        const isDark = !document.body.classList.contains("dark-mode");
+        setTheme(isDark);
+      });
 
-  themeToggle.setAttribute("aria-pressed", String(isDark));
-}
+      /* Responsive review carousel */
+      const track = document.getElementById("reviewsTrack");
+      const slider = document.getElementById("reviewsSlider");
+      const next = document.getElementById("reviewNext");
+      const prev = document.getElementById("reviewPrev");
 
-if (localStorage.getItem("alHafizTheme") === "dark") {
-  document.body.classList.add("dark-mode");
-}
+      if (!track || !slider || !next || !prev) return;
 
-updateThemeButton();
+      let timer = null;
+      let busy = false;
+      let restartTimer = null;
 
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
+      function getStep() {
+        const card = track.querySelector(".review-card");
+        if (!card) return 0;
 
-  localStorage.setItem(
-    "alHafizTheme",
-    document.body.classList.contains("dark-mode")
-      ? "dark"
-      : "light"
-  );
+        const styles = getComputedStyle(track);
+        const gap = parseFloat(styles.columnGap || styles.gap) || 0;
 
-  updateThemeButton();
-});
+        return card.getBoundingClientRect().width + gap;
+      }
+
+      function moveNext() {
+        if (busy) return;
+
+        const first = track.firstElementChild;
+        const distance = getStep();
+
+        if (!first || !distance) return;
+
+        busy = true;
+        track.style.transition = "transform 350ms ease";
+        track.style.transform = `translateX(-${distance}px)`;
+
+        let finished = false;
+
+        function finish(event) {
+          if (finished) return;
+          if (event && (
+            event.target !== track ||
+            event.propertyName !== "transform"
+          )) return;
+
+          finished = true;
+          track.removeEventListener("transitionend", finish);
+
+          track.style.transition = "none";
+          track.appendChild(first);
+          track.style.transform = "translateX(0)";
+          track.offsetHeight;
+
+          track.style.transition = "transform 350ms ease";
+          busy = false;
+        }
+
+        track.addEventListener("transitionend", finish);
+        window.setTimeout(finish, 450);
+      }
+
+      function movePrev() {
+        if (busy) return;
+
+        const last = track.lastElementChild;
+        const distance = getStep();
+
+        if (!last || !distance) return;
+
+        busy = true;
+        track.style.transition = "none";
+        track.insertBefore(last, track.firstElementChild);
+        track.style.transform = `translateX(-${distance}px)`;
+        track.offsetHeight;
+
+        let finished = false;
+
+        function finish(event) {
+          if (finished) return;
+          if (event && (
+            event.target !== track ||
+            event.propertyName !== "transform"
+          )) return;
+
+          finished = true;
+          track.removeEventListener("transitionend", finish);
+          busy = false;
+        }
+
+        track.addEventListener("transitionend", finish);
+
+        requestAnimationFrame(() => {
+          track.style.transition = "transform 350ms ease";
+          track.style.transform = "translateX(0)";
+        });
+
+        window.setTimeout(() => {
+          if (finished) return;
+          track.style.transition = "none";
+          track.style.transform = "translateX(0)";
+          busy = false;
+          finished = true;
+          track.removeEventListener("transitionend", finish);
+        }, 450);
+      }
+
+      function stopAutoplay() {
+        if (timer) {
+          clearInterval(timer);
+          timer = null;
+        }
+      }
+
+      function startAutoplay() {
+        stopAutoplay();
+
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          return;
+        }
+
+        timer = setInterval(moveNext, 4000);
+      }
+
+      next.addEventListener("click", () => {
+        moveNext();
+        startAutoplay();
+      });
+
+      prev.addEventListener("click", () => {
+        movePrev();
+        startAutoplay();
+      });
+
+      slider.addEventListener("mouseenter", stopAutoplay);
+      slider.addEventListener("mouseleave", startAutoplay);
+      slider.addEventListener("focusin", stopAutoplay);
+
+      slider.addEventListener("focusout", event => {
+        if (!slider.contains(event.relatedTarget)) {
+          startAutoplay();
+        }
+      });
+
+      let touchStartX = 0;
+
+      slider.addEventListener("touchstart", event => {
+        touchStartX = event.changedTouches[0].clientX;
+        stopAutoplay();
+      }, { passive: true });
+
+      slider.addEventListener("touchend", event => {
+        const touchEndX = event.changedTouches[0].clientX;
+        const distance = touchEndX - touchStartX;
+
+        if (Math.abs(distance) > 45) {
+          if (distance < 0) {
+            moveNext();
+          } else {
+            movePrev();
+          }
+        }
+
+        startAutoplay();
+      }, { passive: true });
+
+      window.addEventListener("resize", () => {
+        clearTimeout(restartTimer);
+
+        restartTimer = setTimeout(() => {
+          track.style.transition = "none";
+          track.style.transform = "translateX(0)";
+          busy = false;
+          startAutoplay();
+        }, 150);
+      });
+
+      startAutoplay();
+    })();
+  </script>
 
 </body>
 </html>
