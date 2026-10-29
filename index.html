@@ -650,6 +650,18 @@ footer a {
     padding: 10px 13px;
   }
 }
+    .existing-class {
+    color: black;
+  }
+
+  /* Yahan naya CSS paste karo */
+  .hero-photo {
+    position: relative;
+    width: 100%;
+    min-height: 340px;
+  }
+
+</style>
 </style>
 </head>
 
@@ -726,30 +738,13 @@ footer a {
       </div>
     </div>
 
-    <div class="block-art" aria-label="Illustration of concrete blocks">
-      <div class="block-stack">
-
-        <div class="concrete-block">
-          <span class="hole"></span>
-          <span class="hole"></span>
-        </div>
-
-        <div class="concrete-block">
-          <span class="hole"></span>
-          <span class="hole"></span>
-        </div>
-
-        <div class="concrete-block">
-          <span class="hole"></span>
-          <span class="hole"></span>
-        </div>
-
-      </div>
-
-      <div class="art-label">AL HAFIZ · EST. 2018</div>
-    </div>
-
+    <div class="hero-photo">
+  <img src="./B1.jpg"
+       alt="Al Hafiz Blocks Factory in Talagang">
+  <div class="hero-photo-label">
+    AL HAFIZ BLOCKS FACTORY · EST. 2018
   </div>
+</div>
 </section>
 
 <!-- BUSINESS HIGHLIGHTS -->
@@ -1092,6 +1087,37 @@ footer a {
 
   </div>
 </footer>
+
+const themeToggle = document.getElementById("themeToggle");
+
+function updateThemeButton() {
+  const isDark = document.body.classList.contains("dark-mode");
+
+  themeToggle.textContent = isDark
+    ? "☀️ Light Mode"
+    : "🌙 Dark Mode";
+
+  themeToggle.setAttribute("aria-pressed", String(isDark));
+}
+
+if (localStorage.getItem("alHafizTheme") === "dark") {
+  document.body.classList.add("dark-mode");
+}
+
+updateThemeButton();
+
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  localStorage.setItem(
+    "alHafizTheme",
+    document.body.classList.contains("dark-mode")
+      ? "dark"
+      : "light"
+  );
+
+  updateThemeButton();
+});
 
 </body>
 </html>
